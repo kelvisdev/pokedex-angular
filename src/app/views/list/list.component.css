@@ -39,9 +39,13 @@
   cursor: pointer;
   list-style: none;
   background-color: #333;
-  color: white; }
+  color: white;
+}
+
 .poke-list-item:hover {
-  background-color: #555; }
+  background-color: #555;
+}
+
 .poke-list-item img{
   margin-right: 10px;
   vertical-align: middle;
