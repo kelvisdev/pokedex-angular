@@ -11,14 +11,13 @@ export class ListComponent implements OnInit {
 
   selectedPkm = null;
 
-
   get pokemonList() {
-    return this.pokeApi.pokemonList.filter(pokemon => {
+    return this.pokeApi.pokemonList ? this.pokeApi.pokemonList.filter(pokemon => {
       return pokemon
         .name
         .toLowerCase()
         .indexOf(this.nameFilter.toLowerCase()) !== -1;
-    })
+    }) : [];
   }
 
   get pkmSprite(){

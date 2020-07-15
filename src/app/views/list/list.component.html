@@ -10,11 +10,9 @@
 
 
 <ul class="poke-list" >
-  <li
-    class="poke-list-item" *ngFor="let pokemon of pokemonList"
+  <app-list-item
+    *ngFor="let pokemon of pokemonList"
+    [pokemon]="pokemon"
     (mouseenter)="selectPokemon(pokemon)" >
-
-    <img src="//serebii.net/pokedex-xy/icon/{{ pokemon.number | number:'3.0-0' }}.png" >
-    <span>{{ pokemon.number | number:'3.0-0' }} - {{ pokemon.name }}</span>
-  </li>
+  </app-list-item>
 </ul>
